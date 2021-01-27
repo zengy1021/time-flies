@@ -7,12 +7,12 @@
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
-      :default-active="0"
+      :default-active="activeMenu"
     >
       <el-menu-item
         v-for="(item, index) in menuList"
-        :index="index"
-        :key="index"
+        :index="index + ''"
+        :key="item.path"
         @click="gotoMenu(item)"
       >
         <i class="el-icon-menu"></i>
@@ -36,6 +36,13 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    activeMenu() {
+      return (
+        this.menuList.findIndex(item => item.path === this.$route.path) + ""
+      );
+    }
   },
   methods: {
     gotoMenu(item) {

@@ -5,9 +5,10 @@
         是但求其爱
       </div>
       <div class="userInfo">
-        <i>userImg</i>
-        <span>陈奕迅</span>
-        <i>leaveImg</i>
+        <!-- <i class="userSvg"></i> -->
+        <i class="icon iconfont icon-touxiang" style="fontSize:18px;"></i>
+        <span style="margin:0 15px;">陈奕迅</span>
+        <i class="icon iconfont icon-exit"></i>
       </div>
     </div>
   </div>
@@ -33,5 +34,11 @@ export default {
     height: 60px;
     line-height: 60px;
   }
+}
+.userSvg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../assets/img/1.svg") center no-repeat;
 }
 </style>
