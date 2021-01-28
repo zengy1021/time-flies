@@ -27,11 +27,14 @@
         </div>
       </div>
     </div>
-    <el-row>
-      <el-col :span="16" class="titleInfo">
+    <el-row style="margin: 15px 8px 0 8px;">
+      <el-col :span="8" class="itemContent">
         <Zcharts />
       </el-col>
-      <el-col :span="7" :offset="1" class="titleInfo">
+      <el-col :span="8" class="itemContent">
+        <Zcharts />
+      </el-col>
+      <el-col :span="8" class="itemContent">
         <Zcharts />
       </el-col>
     </el-row>
@@ -57,7 +60,7 @@ export default {
     border-radius: 8px;
     background: #fff;
     overflow: hidden;
-    margin-top: 15px;
+    margin: 15px 8px 0 8px;
     .titleHeader {
       display: flex;
       height: 40px;
@@ -103,6 +106,13 @@ export default {
         }
       }
     }
+  }
+  .itemContent {
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    margin: 15px 8px 0 0px;
+    box-sizing: border-box;
   }
 }
 </style>
