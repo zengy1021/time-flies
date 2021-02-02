@@ -1,11 +1,25 @@
 <template>
   <div>
-    <div id="echarts" class="echartInfo"></div>
+    <div id="echarts" class="echartInfo" :style="{ width, height }"></div>
   </div>
 </template>
 <script>
 import * as echarts from "echarts";
 export default {
+  props: {
+    width: {
+      type: [String, Number],
+      default: 0
+    },
+    height: {
+      type: [String, Number],
+      default: 0
+    },
+    title: {
+      type: String,
+      default: "text"
+    }
+  },
   data() {
     return {};
   },
@@ -17,7 +31,7 @@ export default {
       var myEcharts = echarts.init(document.getElementById("echarts"));
       myEcharts.setOption({
         title: {
-          text: "ECharts 入门示例"
+          text: this.title
         },
         tooltip: {},
         xAxis: {
