@@ -41,12 +41,20 @@
         </el-col>
       </el-row>
     </div>
-    <el-row class="otherInfo" gutter="20">
+    <el-row class="otherInfo" :gutter="20">
       <el-col :span="8">
         <div class="itemInfo" style="height:500px;">
-          <div class="title">
-            天气：晴
-          </div>
+          <el-row class="weatherStyle">
+            <el-col :span="12">
+              <div class="title">
+                日历
+              </div>
+            </el-col>
+            <el-col :span="12">
+              <div id="he-plugin-standard"></div>
+            </el-col>
+          </el-row>
+          <MapBox />
         </div>
       </el-col>
       <el-col :span="16">
@@ -58,14 +66,47 @@
     </el-row>
   </div>
 </template>
-
 <script>
 // @ is an alias to /src
 import Zcharts from "@/views/homeComponents/Zcharts";
+import MapBox from "@/components/MapBox";
 export default {
   name: "Home",
   components: {
-    Zcharts
+    Zcharts,
+    MapBox
+  },
+  data() {
+    return {
+      WIDGET: {
+        CONFIG: {
+          layout: 1,
+          width: "450",
+          height: "150",
+          background: 1,
+          dataColor: "FFFFFF",
+          borderRadius: "8",
+          modules: "10",
+          key: "d6df5bafd71e4678979ae8932991accc"
+        }
+      }
+    };
+  },
+  created() {},
+  mounted() {
+    this.init();
+  },
+  methods: {
+    init() {
+      (function(d) {
+        var s = d.createElement("script");
+        s.src =
+          "https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0";
+        var sn = d.getElementsByTagName("script")[0];
+        sn.parentNode.insertBefore(s, sn);
+        console.log(sn.parentNode);
+      })(document);
+    }
   }
 };
 </script>
@@ -131,7 +172,7 @@ export default {
           position: relative;
           img {
             position: absolute;
-            width: 80%;
+            max-width: 350px;
             bottom: 0;
           }
         }
@@ -146,6 +187,11 @@ export default {
       background: #fff;
       border-radius: 8px;
       padding: 30px 20px;
+    }
+  }
+  .weatherStyle {
+    /deep/.wv-lt-refresh {
+      display: none;
     }
   }
 }

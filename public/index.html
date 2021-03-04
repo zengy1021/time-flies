@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://widget.heweather.net/standard/static/css/he-standard.css?v=1.4.0">
     <!-- <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_8d5l8fzk5b87iudi.css"> -->
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
@@ -14,5 +15,21 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "layout": 2,
+          "width": "230",
+          "height": "300",
+          "background": 1,
+          "dataColor": "FFFFFF",
+          "borderRadius": "8",
+          // "modules": "10",
+          "city": "CN101200101",
+          "key": "d6df5bafd71e4678979ae8932991accc"
+        }
+      }
+    </script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ae4ae078437f01225ce5b2c84e5d5cbe"></script> 
   </body>
 </html>
