@@ -5,7 +5,7 @@ import store from "./store";
 import ElementUi from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import "@/assets/icon/iconfont.css";
-// import "@/assets/scss/main.scss";
+import "@/assets/scss/main.scss";
 import AmapVue from "@amap/amap-vue";
 
 Vue.config.productionTip = false;

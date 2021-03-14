@@ -1,0 +1,84 @@
+.pageTitle{
+  font-weight: 900;
+  font-size: 26px;
+}
+.iconFontStyle{
+  font-size: 20px;
+  vertical-align: middle;
+  &:hover{
+    cursor: pointer;
+    color: #61cad7;
+  }
+}
+.dotStatus{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  border-radius: 50%;
+  &:hover{
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.2);
+  }
+}
+.dotSuccess{
+  background:#797ff9;
+}
+.dotErr{
+  background:#ff6d5a;
+}
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar { width:8px; height:2px; background:#f5f5fb; border-radius:10px;/*外层轨道*/} 
+::-webkit-scrollbar-thumb{ display:block; width:6px; margin:0 auto; border-radius: 10px; background:#61cad7;/*内层轨道*/}
+.el-table{
+  border: 1px solid #eee;
+  border-radius: 8px;
+  width: calc(100% - 40px);
+  padding: 20px;
+  box-sizing: content-box;
+  .el-table__header-wrapper{
+    border-radius: 8px;
+    overflow: hidden;
+
+  }
+  th{
+    background: #f5f5fb;
+    color: #a8a8b8;
+  }
+  th.is-leaf{
+    border-bottom: 1px solid transparent;
+
+  }
+}
+.el-button--primary{
+  background: #61cad7;
+  color: #fff;
+  border-color: #61cad7;
+}
+.el-button--primary:hover{
+  background: #61cad7;
+  border-color: #61cad7;
+  opacity: 0.8;
+}
+
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+  border-radius: 4px;
+  background-color: #fff;
+  color: #9999ab;
+  border: 1px solid #e7f7f9;
+}
+.el-pagination button:hover{
+  color: #61c9d6;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active{
+  background-color: #e7f7f9;
+  color: #61c9d6;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover{
+  color: #61c9d6;
+  border-color: #e7f7f9;
+
+}
+
+
