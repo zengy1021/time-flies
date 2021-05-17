@@ -45,7 +45,7 @@
       <div style="textAlign:left;margin-bottom:15px;">
         <el-button>新建</el-button>
       </div>
-      <el-table :data="dataList" border stripe>
+      <el-table :data="dataList" stripe>
         <el-table-column prop="id" label="ID"> </el-table-column>
         <el-table-column prop="name" label="名称"> </el-table-column>
         <el-table-column prop="age" label="年龄"> </el-table-column>
