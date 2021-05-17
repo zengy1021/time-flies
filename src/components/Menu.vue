@@ -16,7 +16,7 @@
         :key="item.path"
         @click="gotoMenu(item)"
       >
-        <i class="el-icon-menu"></i>
+        <i :class="item.icon"></i>
         <span slot="title">{{ item.title }}</span>
       </el-menu-item>
     </el-menu>
@@ -29,11 +29,18 @@ export default {
       menuList: [
         {
           title: "首页",
-          path: "/"
+          path: "/",
+          icon: "el-icon-s-home"
         },
         {
           title: "列表",
-          path: "/adminList"
+          path: "/adminList",
+          icon: "el-icon-menu"
+        },
+        {
+          title: "娱乐",
+          path: "/randomSize",
+          icon: "el-icon-s-promotion"
         }
       ],
       logoImg:
