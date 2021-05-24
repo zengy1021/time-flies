@@ -5,11 +5,13 @@
         <Menu class="menu" />
       </el-aside>
       <el-container class="colstyle">
-        <!-- <el-header style="height:60px;">
+        <el-header style="height: 60px">
           <Header class="header"></Header>
-        </el-header> -->
+        </el-header>
         <el-main class="mainInfo">
-          <router-view />
+          <keep-alive>
+            <router-view />
+          </keep-alive>
         </el-main>
         <!-- <el-footer style="height:60px;">
           <Footer class="header"></Footer>
@@ -20,12 +22,12 @@
 </template>
 <script>
 import Menu from "@/components/Menu";
-// import Header from "@/components/Header";
+import Header from "@/components/Header";
 // import Footer from "@/components/Footer";
 export default {
   components: {
-    Menu
-    // Header,
+    Menu,
+    Header
     // Footer
   },
   data() {
@@ -54,6 +56,7 @@ export default {
   }
   .el-header {
     padding: 0;
+    background: #f5f5fb;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   }
   .el-footer {
