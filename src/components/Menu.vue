@@ -2,7 +2,7 @@
   <div class="menuBox">
     <div class="logo">
       <el-avatar shape="square" size="large" :src="logoImg"></el-avatar>
-      <span class="name">admin</span>
+      <span class="name">时光飞逝</span>
     </div>
     <el-menu
       background-color="#fff"
@@ -28,39 +28,39 @@ export default {
     return {
       menuList: [
         {
-          title: "首页",
-          path: "/",
-          icon: "el-icon-s-home"
+          title: '首页',
+          path: '/',
+          icon: 'el-icon-s-home'
         },
         {
-          title: "列表",
-          path: "/adminList",
-          icon: "el-icon-menu"
+          title: '列表',
+          path: '/adminList',
+          icon: 'el-icon-menu'
         },
         {
-          title: "娱乐",
-          path: "/randomSize",
-          icon: "el-icon-s-promotion"
+          title: '娱乐',
+          path: '/randomSize',
+          icon: 'el-icon-s-promotion'
         }
       ],
       logoImg:
-        "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
-    };
+        'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'
+    }
   },
   computed: {
     activeMenu() {
       return (
-        this.menuList.findIndex(item => item.path === this.$route.path) + ""
-      );
+        this.menuList.findIndex((item) => item.path === this.$route.path) + ''
+      )
     }
   },
   methods: {
     gotoMenu(item) {
-      console.log(item);
-      this.$router.push({ path: item.path });
+      // console.log(item);
+      this.$router.push({ path: item.path })
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .menuBox {
@@ -82,7 +82,7 @@ export default {
   .el-menu-item.is-active {
     position: relative;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 3px;
       height: 18px;

@@ -1,15 +1,13 @@
 <template>
   <div class="home">
-    <div class="mainTitle">
-      首页
-    </div>
+    <div class="mainTitle">首页</div>
     <div class="toDayInfo">
       <div class="title">Have a nice day !</div>
       <div class="time">2021年8月22日，天气：晴。</div>
       <el-row class="currentInfo">
         <el-col :span="6" class="itemInfo">
           <div class="img">
-            <i class="icon iconfont icon-qiandao" style="fontSize:38px;"></i>
+            <i class="icon iconfont icon-qiandao" style="fontsize: 38px"></i>
           </div>
           <div class="info">
             <div class="type">分享</div>
@@ -18,7 +16,7 @@
         </el-col>
         <el-col :span="6" class="itemInfo">
           <div class="img">
-            <i class="icon iconfont icon-user" style="fontSize:38px;"></i>
+            <i class="icon iconfont icon-user" style="fontsize: 38px"></i>
           </div>
           <div class="info">
             <div class="type">用户</div>
@@ -27,7 +25,7 @@
         </el-col>
         <el-col :span="6" class="itemInfo">
           <div class="img">
-            <i class="icon iconfont icon-xiaoxi" style="fontSize:38px;"></i>
+            <i class="icon iconfont icon-xiaoxi" style="fontsize: 38px"></i>
           </div>
           <div class="info">
             <div class="type">反馈</div>
@@ -43,12 +41,10 @@
     </div>
     <el-row class="otherInfo" :gutter="20">
       <el-col :span="8">
-        <div class="itemInfo" style="height:500px;">
+        <div class="itemInfo" style="height: 500px">
           <el-row class="weatherStyle">
             <el-col :span="12">
-              <div class="title">
-                日历
-              </div>
+              <div class="title">日历</div>
             </el-col>
             <el-col :span="12">
               <div id="he-plugin-standard"></div>
@@ -68,10 +64,10 @@
 </template>
 <script>
 // @ is an alias to /src
-import Zcharts from "@/views/homeComponents/Zcharts";
-import MapBox from "@/components/MapBox";
+import Zcharts from '@/views/homeComponents/Zcharts'
+import MapBox from '@/components/MapBox'
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     Zcharts,
     MapBox
@@ -81,34 +77,34 @@ export default {
       WIDGET: {
         CONFIG: {
           layout: 1,
-          width: "450",
-          height: "150",
+          width: '450',
+          height: '150',
           background: 1,
-          dataColor: "FFFFFF",
-          borderRadius: "8",
-          modules: "10",
-          key: "d6df5bafd71e4678979ae8932991accc"
+          dataColor: 'FFFFFF',
+          borderRadius: '8',
+          modules: '10',
+          key: 'd6df5bafd71e4678979ae8932991accc'
         }
       }
-    };
+    }
   },
   created() {},
   mounted() {
-    this.init();
+    this.init()
   },
   methods: {
     init() {
-      (function(d) {
-        var s = d.createElement("script");
+      ;(function (d) {
+        var s = d.createElement('script')
         s.src =
-          "https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0";
-        var sn = d.getElementsByTagName("script")[0];
-        sn.parentNode.insertBefore(s, sn);
-        console.log(sn.parentNode);
-      })(document);
+          'https://widget.heweather.net/standard/static/js/he-standard.js?v=1.4.0'
+        var sn = d.getElementsByTagName('script')[0]
+        sn.parentNode.insertBefore(s, sn)
+        // console.log(sn.parentNode);
+      })(document)
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .home {

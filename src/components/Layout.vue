@@ -19,7 +19,7 @@
   </div>
 </template>
 <script>
-import Menu from "@/components/Menu";
+import Menu from '@/components/Menu'
 // import Header from "@/components/Header";
 // import Footer from "@/components/Footer";
 export default {
@@ -29,9 +29,9 @@ export default {
     // Footer
   },
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .layout {
@@ -43,6 +43,7 @@ export default {
     height: 100%;
     overflow: hidden;
     flex: 1;
+    box-sizing: border-box;
   }
   .menu {
     min-width: 200px;
@@ -69,6 +70,7 @@ export default {
   }
   .mainInfo {
     background: #f5f5fb;
+    padding: 0 20px;
   }
 }
 </style>
